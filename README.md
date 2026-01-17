@@ -2,7 +2,32 @@
 
 Next.js educational platform with Firebase backend and automatic GitHub deployment.
 
-## 🚀 Quick Start
+## 🚀 Live Site
+
+**https://eduvatekids-store.web.app**
+
+## 📱 Pages
+
+- **Home:** `/` - Main landing page
+- **Login:** `/auth/login` - Firebase authentication
+- **Dashboard:** `/dashboard` - Protected admin dashboard (requires login)
+
+## 🔐 Authentication
+
+To access the dashboard:
+
+1. **Create a user in Firebase Console:**
+   - Visit: https://console.firebase.google.com/u/0/project/eduvatekids-store/authentication/users
+   - Click "Add user"
+   - Enter email and password
+   - Click "Add user"
+
+2. **Login:**
+   - Go to: https://eduvatekids-store.web.app/auth/login
+   - Enter your credentials
+   - Access dashboard
+
+## 💻 Local Development
 
 ```bash
 npm install
@@ -16,33 +41,6 @@ Visit: http://localhost:8050
 - **Live:** https://eduvatekids-store.web.app
 - **GitHub:** https://github.com/ismailukman/EduvateKids
 - **Firebase:** https://console.firebase.google.com/u/0/project/eduvatekids-store
-
-## 📚 Documentation
-
-### Setup Guides:
-1. **QUICK_START.md** - 7-step quick setup guide
-2. **GITHUB_SECRETS.md** - GitHub secrets configuration
-3. **FIREBASE_SETUP.md** - Detailed Firebase setup
-4. **SETUP_COMPLETE.md** - Complete setup documentation
-
-### Helper Scripts:
-- `setup-firebase.bat` - Initial Firebase deployment
-- `deploy-firebase.bat` - Manual deployment script
-
-## 🔐 GitHub Secrets Required
-
-Add these secrets at: https://github.com/ismailukman/EduvateKids/settings/secrets/actions
-
-1. `NEXT_PUBLIC_FIREBASE_API_KEY`
-2. `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
-3. `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
-4. `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`
-5. `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
-6. `NEXT_PUBLIC_FIREBASE_APP_ID`
-7. `NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID`
-8. `FIREBASE_SERVICE_ACCOUNT` (JSON from Firebase Console)
-
-See **GITHUB_SECRETS.md** for exact values and instructions.
 
 ## 🚀 Automatic Deployment
 
