@@ -1,52 +1,21 @@
 # EduvateKids - Educational Platform
 
-A Next.js-based educational platform with Firebase integration and automatic deployment.
+Next.js educational platform with Firebase backend and automatic GitHub deployment.
 
-## 🚀 Live URLs
-
-- **Production:** https://eduvatekids-store.web.app
-- **Alternate:** https://eduvatekids-store.firebaseapp.com
-- **Local Dev:** http://localhost:8050
-
-## 📋 Quick Start
-
-### For Local Development:
+## 🚀 Quick Start
 
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
-
-# Visit http://localhost:8050
 ```
 
-### For Initial Firebase Setup:
+Visit: http://localhost:8050
 
-```bash
-# Run the automated setup script
-setup-firebase.bat
-```
+## 🔗 URLs
 
-This will:
-1. Login to Firebase
-2. Deploy Firestore rules
-3. Deploy to Firebase Hosting
-4. Set up auto-deployment
-
-## 🔧 Configuration Files
-
-### Environment Variables
-- `.env.local` - Your local Firebase configuration (✅ Already configured)
-- `.env.local.example` - Template for new developers
-
-### Firebase Files
-- `firebase.json` - Firebase Hosting configuration
-- `.firebaserc` - Firebase project settings
-- `firestore.rules` - Firestore security rules
-- `firestore.indexes.json` - Database indexes
-- `lib/firebase.ts` - Firebase SDK initialization
+- **Live:** https://eduvatekids-store.web.app
+- **GitHub:** https://github.com/ismailukman/EduvateKids
+- **Firebase:** https://console.firebase.google.com/u/0/project/eduvatekids-store
 
 ## 📚 Documentation
 
