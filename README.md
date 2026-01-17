@@ -1,0 +1,214 @@
+# EduvateKids - Educational Platform
+
+A Next.js-based educational platform with Firebase integration and automatic deployment.
+
+## 🚀 Live URLs
+
+- **Production:** https://eduvatekids-store.web.app
+- **Alternate:** https://eduvatekids-store.firebaseapp.com
+- **Local Dev:** http://localhost:8050
+
+## 📋 Quick Start
+
+### For Local Development:
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Visit http://localhost:8050
+```
+
+### For Initial Firebase Setup:
+
+```bash
+# Run the automated setup script
+setup-firebase.bat
+```
+
+This will:
+1. Login to Firebase
+2. Deploy Firestore rules
+3. Deploy to Firebase Hosting
+4. Set up auto-deployment
+
+## 🔧 Configuration Files
+
+### Environment Variables
+- `.env.local` - Your local Firebase configuration (✅ Already configured)
+- `.env.local.example` - Template for new developers
+
+### Firebase Files
+- `firebase.json` - Firebase Hosting configuration
+- `.firebaserc` - Firebase project settings
+- `firestore.rules` - Firestore security rules
+- `firestore.indexes.json` - Database indexes
+- `lib/firebase.ts` - Firebase SDK initialization
+
+## 📚 Documentation
+
+### Setup Guides:
+1. **QUICK_START.md** - 7-step quick setup guide
+2. **GITHUB_SECRETS.md** - GitHub secrets configuration
+3. **FIREBASE_SETUP.md** - Detailed Firebase setup
+4. **SETUP_COMPLETE.md** - Complete setup documentation
+
+### Helper Scripts:
+- `setup-firebase.bat` - Initial Firebase deployment
+- `deploy-firebase.bat` - Manual deployment script
+
+## 🔐 GitHub Secrets Required
+
+Add these secrets at: https://github.com/ismailukman/EduvateKids/settings/secrets/actions
+
+1. `NEXT_PUBLIC_FIREBASE_API_KEY`
+2. `NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN`
+3. `NEXT_PUBLIC_FIREBASE_PROJECT_ID`
+4. `NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET`
+5. `NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID`
+6. `NEXT_PUBLIC_FIREBASE_APP_ID`
+7. `NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID`
+8. `FIREBASE_SERVICE_ACCOUNT` (JSON from Firebase Console)
+
+See **GITHUB_SECRETS.md** for exact values and instructions.
+
+## 🚀 Automatic Deployment
+
+### How It Works:
+Every push to `master` branch automatically:
+1. ✅ Builds the Next.js application
+2. ✅ Runs all tests
+3. ✅ Deploys to Firebase Hosting
+4. ✅ Updates live site
+
+### Deployment Status:
+Check: https://github.com/ismailukman/EduvateKids/actions
+
+## 📦 Project Structure
+
+```
+app/
+├── .github/workflows/     # GitHub Actions
+├── app/                   # Next.js app directory
+│   ├── auth/login/       # Login page
+│   ├── dashboard/        # Dashboard page
+│   └── components/       # React components
+├── lib/                  # Utilities and configs
+│   └── firebase.ts       # Firebase configuration
+├── public/               # Static assets
+├── assets/               # Images and media
+├── firebase.json         # Firebase config
+├── firestore.rules       # Database rules
+└── next.config.js        # Next.js config
+```
+
+## 🛠️ Available Scripts
+
+```bash
+# Development
+npm run dev          # Start dev server (port 8050)
+
+# Production
+npm run build        # Build for production
+npm run start        # Start production server
+npm run export       # Export static site
+
+# Firebase
+firebase login       # Login to Firebase
+firebase deploy      # Deploy everything
+firebase deploy --only hosting    # Deploy hosting only
+firebase deploy --only firestore  # Deploy Firestore rules
+```
+
+## 🔥 Firebase Services Used
+
+- **Hosting** - Static site hosting
+- **Firestore** - NoSQL database
+- **Authentication** - User authentication
+- **Analytics** - Usage analytics
+
+## 📱 Features
+
+- ✅ User Authentication
+- ✅ Dashboard with Analytics
+- ✅ Responsive Design
+- ✅ Firebase Integration
+- ✅ Auto-deployment via GitHub Actions
+- ✅ Firestore Database
+- ✅ Analytics Tracking
+
+## 🔒 Security
+
+- Environment variables stored securely
+- Firestore rules protect data
+- Authentication required for protected routes
+- GitHub secrets encrypted
+
+## 📝 Development Workflow
+
+1. **Make changes locally**
+   ```bash
+   npm run dev
+   # Test at http://localhost:8050
+   ```
+
+2. **Commit changes**
+   ```bash
+   git add .
+   git commit -m "Your message"
+   ```
+
+3. **Push to GitHub**
+   ```bash
+   git push origin master
+   ```
+
+4. **Automatic deployment**
+   - GitHub Actions builds and deploys
+   - Check status in Actions tab
+   - Live site updates automatically
+
+## 🆘 Troubleshooting
+
+### Build Fails
+- Check GitHub Actions logs
+- Verify all secrets are set
+- Ensure .env.local exists locally
+
+### Firestore Permission Denied
+- Check authentication status
+- Review firestore.rules
+- Deploy rules: `firebase deploy --only firestore:rules`
+
+### Can't Access Site
+- Wait for deployment to complete
+- Check Firebase Console
+- Clear browser cache
+
+## 📞 Support
+
+- **Firebase Console:** https://console.firebase.google.com/u/0/project/eduvatekids-store
+- **GitHub Repo:** https://github.com/ismailukman/EduvateKids
+- **GitHub Actions:** https://github.com/ismailukman/EduvateKids/actions
+
+## 📄 License
+
+Private - All rights reserved
+
+## 👥 Contributing
+
+This is a private project. Contact the owner for contribution guidelines.
+
+---
+
+**Built with:**
+- Next.js 14.2.16
+- React 18.3.1
+- Firebase 12.8.0
+- TypeScript 5.4.5
+- Tailwind CSS 3.4.4
+
+**Last Updated:** 2026-01-17
